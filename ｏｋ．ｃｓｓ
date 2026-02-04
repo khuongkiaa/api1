@@ -1,0 +1,61 @@
+/* ===== Tổng thể ===== */
+.controller {
+    background: transparent !important;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 180, 0.25));
+}
+
+/* ===== Thân tay cầm ===== */
+.controller.xbox {
+    background-image: none !important;
+}
+
+/* ===== Nút chung ===== */
+.button,
+.trigger,
+.bumpers,
+.stick {
+    transition: all 0.08s ease-in-out;
+}
+
+/* ===== Nút ABXY ===== */
+.a.pressed { background: #00ff6a !important; box-shadow: 0 0 12px #00ff6a; }
+.b.pressed { background: #ff3b3b !important; box-shadow: 0 0 12px #ff3b3b; }
+.x.pressed { background: #3b8cff !important; box-shadow: 0 0 12px #3b8cff; }
+.y.pressed { background: #ffd43b !important; box-shadow: 0 0 12px #ffd43b; }
+
+/* ===== D-Pad ===== */
+.dpad .pressed {
+    background: #00e5ff !important;
+    box-shadow: 0 0 10px #00e5ff;
+}
+
+/* ===== Trigger ===== */
+.trigger.pressed {
+    background: linear-gradient(180deg, #00ffcc, #007766) !important;
+    box-shadow: 0 0 15px rgba(0,255,200,0.6);
+}
+
+/* ===== Bumper ===== */
+.bumper.pressed {
+    background: #ffffff !important;
+    box-shadow: 0 0 12px white;
+}
+
+/* ===== Analog Stick ===== */
+.stick.pressed {
+    background: #00ffcc !important;
+    box-shadow: 0 0 15px rgba(0,255,200,0.7);
+}
+
+/* ===== Start / Back ===== */
+.start.pressed,
+.back.pressed {
+    background: #ffffff !important;
+    box-shadow: 0 0 10px white;
+}
+
+/* ===== Ẩn nền thừa (cho OBS gọn) ===== */
+.controller::before,
+.controller::after {
+    display: none !important;
+}
