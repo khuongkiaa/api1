@@ -1,61 +1,70 @@
-/* ===== Tổng thể ===== */
-.controller {
+/* ===== Ẩn toàn bộ tay cầm ===== */
+.controller,
+.controller * {
     background: transparent !important;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 180, 0.25));
+    box-shadow: none !important;
 }
 
-/* ===== Thân tay cầm ===== */
-.controller.xbox {
-    background-image: none !important;
-}
-
-/* ===== Nút chung ===== */
+/* ===== Chỉ hiện nút khi bấm ===== */
 .button,
+.dpad,
 .trigger,
-.bumpers,
+.bumper,
 .stick {
-    transition: all 0.08s ease-in-out;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.08s ease;
 }
 
-/* ===== Nút ABXY ===== */
-.a.pressed { background: #00ff6a !important; box-shadow: 0 0 12px #00ff6a; }
-.b.pressed { background: #ff3b3b !important; box-shadow: 0 0 12px #ff3b3b; }
-.x.pressed { background: #3b8cff !important; box-shadow: 0 0 12px #3b8cff; }
-.y.pressed { background: #ffd43b !important; box-shadow: 0 0 12px #ffd43b; }
+/* ===== Khi bấm thì hiện ===== */
+.pressed {
+    opacity: 1 !important;
+    transform: scale(1);
+}
+
+/* ===== ABXY ===== */
+.a.pressed {
+    background: #00ff6a !important;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+}
+
+.b.pressed {
+    background: #ff3b3b !important;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+}
+
+.x.pressed {
+    background: #3b8cff !important;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+}
+
+.y.pressed {
+    background: #ffd43b !important;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+}
 
 /* ===== D-Pad ===== */
 .dpad .pressed {
-    background: #00e5ff !important;
-    box-shadow: 0 0 10px #00e5ff;
+    background: white !important;
+    width: 28px; height: 28px;
+    border-radius: 6px;
 }
 
-/* ===== Trigger ===== */
-.trigger.pressed {
-    background: linear-gradient(180deg, #00ffcc, #007766) !important;
-    box-shadow: 0 0 15px rgba(0,255,200,0.6);
-}
-
-/* ===== Bumper ===== */
+/* ===== Trigger & Bumper ===== */
+.trigger.pressed,
 .bumper.pressed {
-    background: #ffffff !important;
-    box-shadow: 0 0 12px white;
+    background: white !important;
+    width: 60px; height: 14px;
+    border-radius: 8px;
 }
 
-/* ===== Analog Stick ===== */
+/* ===== Stick click ===== */
 .stick.pressed {
     background: #00ffcc !important;
-    box-shadow: 0 0 15px rgba(0,255,200,0.7);
-}
-
-/* ===== Start / Back ===== */
-.start.pressed,
-.back.pressed {
-    background: #ffffff !important;
-    box-shadow: 0 0 10px white;
-}
-
-/* ===== Ẩn nền thừa (cho OBS gọn) ===== */
-.controller::before,
-.controller::after {
-    display: none !important;
+    width: 36px; height: 36px;
+    border-radius: 50%;
 }
