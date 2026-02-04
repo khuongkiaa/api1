@@ -1,70 +1,42 @@
-/* ===== Ẩn toàn bộ tay cầm ===== */
-.controller,
-.controller * {
-    background: transparent !important;
-    box-shadow: none !important;
-}
-
-/* ===== Chỉ hiện nút khi bấm ===== */
+/* ===== Trạng thái bình thường ===== */
 .button,
-.dpad,
+.dpad .direction,
 .trigger,
 .bumper,
 .stick {
-    opacity: 0;
-    transform: scale(0.8);
+    opacity: 0.3;
+    transform: scale(0.75);
     transition: all 0.08s ease;
+    background: #ffffff !important;
 }
 
-/* ===== Khi bấm thì hiện ===== */
+/* ===== Khi nhấn ===== */
 .pressed {
     opacity: 1 !important;
-    transform: scale(1);
+    transform: scale(1.3);
+    background: #00ffcc !important;
+    box-shadow: 0 0 18px rgba(0, 255, 204, 0.9);
 }
 
-/* ===== ABXY ===== */
-.a.pressed {
-    background: #00ff6a !important;
-    width: 40px; height: 40px;
-    border-radius: 50%;
-}
-
-.b.pressed {
-    background: #ff3b3b !important;
-    width: 40px; height: 40px;
-    border-radius: 50%;
-}
-
-.x.pressed {
-    background: #3b8cff !important;
-    width: 40px; height: 40px;
-    border-radius: 50%;
-}
-
-.y.pressed {
-    background: #ffd43b !important;
-    width: 40px; height: 40px;
-    border-radius: 50%;
-}
+/* ===== ABXY màu riêng ===== */
+.a.pressed { background: #00ff6a !important; }
+.b.pressed { background: #ff3b3b !important; }
+.x.pressed { background: #3b8cff !important; }
+.y.pressed { background: #ffd43b !important; }
 
 /* ===== D-Pad ===== */
 .dpad .pressed {
-    background: white !important;
-    width: 28px; height: 28px;
-    border-radius: 6px;
+    background: #ffffff !important;
+    box-shadow: 0 0 14px white;
 }
 
-/* ===== Trigger & Bumper ===== */
+/* ===== Trigger / Bumper ===== */
 .trigger.pressed,
 .bumper.pressed {
-    background: white !important;
-    width: 60px; height: 14px;
-    border-radius: 8px;
+    transform: scale(1.4);
 }
 
-/* ===== Stick click ===== */
-.stick.pressed {
-    background: #00ffcc !important;
-    width: 36px; height: 36px;
-    border-radius: 50%;
+/* ===== Ẩn thân tay cầm ===== */
+.controller {
+    background: transparent !important;
 }
