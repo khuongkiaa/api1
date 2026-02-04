@@ -1,21 +1,38 @@
-/* ===== Trạng thái bình thường ===== */
+/* ===== Ẩn tay cầm ===== */
+.controller {
+    background: transparent !important;
+}
+
+/* ===== Khung xếp ngang ===== */
+.controller {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* ===== Mặc định ===== */
 .button,
 .dpad .direction,
 .trigger,
 .bumper,
 .stick {
     opacity: 0.3;
-    transform: scale(0.75);
+    transform: scale(0.7);
     transition: all 0.08s ease;
     background: #ffffff !important;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
 }
 
 /* ===== Khi nhấn ===== */
 .pressed {
     opacity: 1 !important;
-    transform: scale(1.3);
+    transform: scale(1.5);
     background: #00ffcc !important;
-    box-shadow: 0 0 18px rgba(0, 255, 204, 0.9);
+    box-shadow: 0 0 18px rgba(0,255,204,0.95);
 }
 
 /* ===== ABXY màu riêng ===== */
@@ -24,19 +41,21 @@
 .x.pressed { background: #3b8cff !important; }
 .y.pressed { background: #ffd43b !important; }
 
+/* ===== Trigger & Bumper dài hơn ===== */
+.trigger,
+.bumper {
+    width: 60px;
+    height: 14px;
+    border-radius: 10px;
+}
+
 /* ===== D-Pad ===== */
-.dpad .pressed {
-    background: #ffffff !important;
-    box-shadow: 0 0 14px white;
+.dpad .direction {
+    width: 28px;
+    height: 28px;
 }
 
-/* ===== Trigger / Bumper ===== */
-.trigger.pressed,
-.bumper.pressed {
-    transform: scale(1.4);
-}
-
-/* ===== Ẩn thân tay cầm ===== */
-.controller {
-    background: transparent !important;
+/* ===== Stick click ===== */
+.stick {
+    border-radius: 50%;
 }
